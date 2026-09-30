@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Christiana Emelia Akuteye | Portfolio BTS SIO SISR</title>
+
+    <meta name="description"
+          content="Portfolio de Christiana Emelia Akuteye, étudiante en 2ème année de BTS SIO SISR. Systèmes, réseaux et cybersécurité.">
+
+    <!-- Police Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #f7f9fc;
+            color: #172033;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* =========================
+           VARIABLES
+        ========================= */
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --dark: #0f172a;
+            --text: #172033;
+            --muted: #64748b;
+            --light: #f7f9fc;
+            --white: #ffffff;
+            --border: #e2e8f0;
+            --shadow: 0 15px 40px rgba(15, 23, 42, 0.08);
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            height: 75px;
+            padding: 0 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: "Poppins", sans-serif;
+            font-size: 21px;
+            font-weight: 800;
+            color: var(--dark);
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #475569;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .menu-button {
+            display: none;
+            border: none;
+            background: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+            padding: 150px 25px 80px;
+
+            display: flex;
+            align-items: center;
+
+            background:
+                radial-gradient(circle at 80% 20%, rgba(37, 99, 235, 0.12), transparent 30%),
+                radial-gradient(circle at 10% 80%, rgba(14, 165, 233, 0.08), transparent 30%),
+                #f8fafc;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            width: 100%;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            background: #eff6ff;
+            color: var(--primary);
+
+            padding: 9px 15px;
+            border-radius: 50px;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            margin-bottom: 25px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #22c55e;
+            border-radius: 50%;
+        }
+
+        .hero h1 {
+            font-family: "Poppins", sans-serif;
+            font-size: clamp(42px, 6vw, 70px);
+            line-height: 1.08;
+            letter-spacing: -2px;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero-subtitle {
+            font-size: 22px;
+            font-weight: 600;
+            color: #334155;
+            margin-bottom: 20px;
+        }
+
+        .hero-description {
+            max-width: 680px;
+            font-size: 17px;
+            color: var(--muted);
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 13px 21px;
+            border-radius: 10px;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: white;
+            border: 1px solid var(--border);
+            color: var(--dark);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           HERO CARD
+        ========================= */
+
+        .hero-card {
+            position: relative;
+        }
+
+        .profile-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 25px;
+            padding: 35px;
+
+            box-shadow: var(--shadow);
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-card::before {
+            content: "";
+            position: absolute;
+            width: 160px;
+            height: 160px;
+            background: rgba(37, 99, 235, 0.08);
+            border-radius: 50%;
+            top: -70px;
+            right: -50px;
+        }
+
+        .profile-icon {
+            width: 85px;
+            height: 85px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 20px;
+
+            background: #eff6ff;
+            color: var(--primary);
+
+            font-size: 42px;
+
+            margin-bottom: 25px;
+        }
+
+        .profile-card h3 {
+            font-family: "Poppins", sans-serif;
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .profile-card p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .contact-list {
+            list-style: none;
+            margin-top: 25px;
+        }
+
+        .contact-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            padding: 11px 0;
+
+            border-bottom: 1px solid #f1f5f9;
+
+            color: #475569;
+            font-size: 14px;
+        }
+
+        .contact-list li:last-child {
+            border-bottom: none;
+        }
+
+        .contact-icon {
+            width: 32px;
+            height: 32px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+
+        /* =========================
+           SECTION
+        ========================= */
+
+        section {
+            padding: 100px 25px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-header {
+            max-width: 700px;
+            margin-bottom: 50px;
+        }
+
+        .section-label {
+            color: var(--primary);
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-family: "Poppins", sans-serif;
+            font-size: 38px;
+            color: var(--dark);
+            margin-bottom: 12px;
+        }
+
+        .section-description {
+            color: var(--muted);
+            font-size: 16px;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .about-text p {
+            color: #475569;
+            margin-bottom: 18px;
+        }
+
+        .about-highlight {
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            padding: 30px;
+            border-radius: 18px;
+        }
+
+        .about-highlight h3 {
+            font-family: "Poppins", sans-serif;
+            margin-bottom: 18px;
+        }
+
+        .about-highlight ul {
+            list-style: none;
+        }
+
+        .about-highlight li {
+            display: flex;
+            gap: 12px;
+            margin: 14px 0;
+            color: #475569;
+        }
+
+        .check {
+            color: var(--primary);
+            font-weight: 800;
+        }
+
+        /* =========================
+           COMPETENCES
+        ========================= */
+
+        .skills {
+            background: #f8fafc;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 25px;
+
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow);
+            border-color: #bfdbfe;
+        }
+
+        .skill-icon {
+            font-size: 32px;
+            margin-bottom: 18px;
+        }
+
+        .skill-card h3 {
+            font-family: "Poppins", sans-serif;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .skill-card p {
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        /* =========================
+           OBJECTIF
+        ========================= */
+
+        .objective {
+            background: white;
+        }
+
+        .objective-box {
+            background: var(--dark);
+            color: white;
+
+            padding: 55px;
+
+            border-radius: 25px;
+
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 50px;
+            align-items: center;
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .objective-box::after {
+            content: "";
+            position: absolute;
+
+            width: 250px;
+            height: 250px;
+
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 50%;
+
+            right: -80px;
+            top: -80px;
+        }
+
+        .objective-box h2 {
+            font-family: "Poppins", sans-serif;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .objective-box p {
+            max-width: 700px;
+            color: #cbd5e1;
+        }
+
+        .objective-icon {
+            font-size: 70px;
+        }
+
+        /* =========================
+           FUTURES PAGES
+        ========================= */
+
+        .pages {
+            background: #f8fafc;
+        }
+
+        .pages-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .page-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 28px;
+            transition: 0.3s;
+        }
+
+        .page-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .page-card .number {
+            color: var(--primary);
+            font-weight: 800;
+            font-size: 13px;
+        }
+
+        .page-card h3 {
+            margin: 12px 0 8px;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .page-card p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 40px 25px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .footer-logo {
+            font-family: "Poppins", sans-serif;
+            font-weight: 800;
+            font-size: 18px;
+        }
+
+        .footer-logo span {
+            color: #60a5fa;
+        }
+
+        .footer-text {
+            color: #94a3b8;
+            font-size: 13px;
+        }
+
+        /* =========================
+           ANIMATION
+        ========================= */
+
+        .fade-in {
+            animation: fadeIn 0.9s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .hero-container {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pages-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .objective-box {
+                grid-template-columns: 1fr;
+            }
+
+            .objective-icon {
+                display: none;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .navbar {
+                height: 65px;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 65px;
+                left: 0;
+                width: 100%;
+
+                display: none;
+                flex-direction: column;
+
+                background: white;
+                padding: 25px;
+
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-button {
+                display: block;
+            }
+
+            .hero {
+                padding-top: 120px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero-subtitle {
+                font-size: 18px;
+            }
+
+            .hero-description {
+                font-size: 15px;
+            }
+
+            .skills-grid,
+            .pages-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+
+            .objective-box {
+                padding: 35px 25px;
+            }
+
+            .objective-box h2 {
+                font-size: 26px;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <a href="#accueil" class="logo">
+                C<span>.</span>E<span>.</span>A
+            </a>
+
+            <button class="menu-button" id="menuButton">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a href="#accueil">Accueil</a>
+                </li>
+
+                <li>
+                    <a href="#apropos">À propos</a>
+                </li>
+
+                <li>
+                    <a href="#competences">Compétences</a>
+                </li>
+
+                <li>
+                    <a href="#projets">Projets</a>
+                </li>
+
+                <li>
+                    <a href="#objectif">Objectif</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         ACCUEIL
+    ========================= -->
+
+    <main>
+
+        <section class="hero" id="accueil">
+
+            <div class="hero-container">
+
+                <div class="hero-content fade-in">
+
+                    <div class="badge">
+                        <span class="status-dot"></span>
+                        Étudiante en 2ᵉ année
+                    </div>
+
+                    <h1>
+                        Bonjour, je suis
+                        <span>Christiana.</span>
+                    </h1>
+
+                    <p class="hero-subtitle">
+                        BTS SIO — Option SISR
+                    </p>
+
+                    <p class="hero-description">
+                        Bienvenue sur mon portfolio. Je suis étudiante en
+                        deuxième année de BTS Services Informatiques aux
+                        Organisations, spécialisée dans les systèmes,
+                        les réseaux et la cybersécurité.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#apropos" class="btn btn-primary">
+                            Découvrir mon profil →
+                        </a>
+
+                        <a href="#competences" class="btn btn-secondary">
+                            Mes compétences
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-card fade-in">
+
+                    <div class="profile-card">
+
+                        <div class="profile-icon">
+                            👩‍💻
+                        </div>
+
+                        <h3>
+                            Christiana Emelia Akuteye
+                        </h3>
+
+                        <p>
+                            Étudiante BTS SIO SISR
+                        </p>
+
+                        <ul class="contact-list">
+
+                            <li>
+                                <span class="contact-icon">📧</span>
+                                <span>akuteyebuenorkor@gmail.com</span>
+                            </li>
+
+                            <li>
+                                <span class="contact-icon">📱</span>
+                                <span>07 46 25 18 90</span>
+                            </li>
+
+                            <li>
+                                <span class="contact-icon">🖥️</span>
+                                <span>Systèmes & Réseaux</span>
+                            </li>
+
+                            <li>
+                                <span class="contact-icon">🔐</span>
+                                <span>Cybersécurité</span>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             À PROPOS
+        ========================= -->
+
+        <section class="about" id="apropos">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div class="section-label">
+                        À propos
+                    </div>
+
+                    <h2 class="section-title">
+                        Mon parcours
+                    </h2>
+
+                    <p class="section-description">
+                        Découvrez mon parcours et les domaines qui
+                        m'intéressent dans l'informatique.
+                    </p>
+
+                </div>
+
+
+                <div class="about-grid">
+
+                    <div class="about-text">
+
+                        <p>
+                            Je m'appelle <strong>Christiana Emelia Akuteye</strong>
+                            et je suis actuellement en deuxième année de
+                            <strong>BTS Services Informatiques aux Organisations
+                            (SIO), option SISR</strong>.
+                        </p>
+
+                        <p>
+                            La spécialité SISR me permet de développer mes
+                            connaissances dans l'administration des systèmes,
+                            les réseaux informatiques, la sécurité et la
+                            maintenance des infrastructures.
+                        </p>
+
+                        <p>
+                            Au cours de ma formation, je réalise différents
+                            travaux pratiques et projets qui me permettent
+                            de mettre en application les connaissances
+                            étudiées en cours.
+                        </p>
+
+                    </div>
+
+
+                    <div class="about-highlight">
+
+                        <h3>
+                            Ce que j'apprends
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                <span class="check">✓</span>
+                                Installation et configuration de systèmes
+                            </li>
+
+                            <li>
+                                <span class="check">✓</span>
+                                Administration des réseaux
+                            </li>
+
+                            <li>
+                                <span class="check">✓</span>
+                                Configuration des équipements réseau
+                            </li>
+
+                            <li>
+                                <span class="check">✓</span>
+                                Environnements Linux
+                            </li>
+
+                            <li>
+                                <span class="check">✓</span>
+                                Sécurité informatique
+                            </li>
+
+                            <li>
+                                <span class="check">✓</span>
+                                Diagnostic et résolution de problèmes
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             COMPÉTENCES
+        ========================= -->
+
+        <section class="skills" id="competences">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div class="section-label">
+                        Compétences
+                    </div>
+
+                    <h2 class="section-title">
+                        Mes domaines de compétences
+                    </h2>
+
+                    <p class="section-description">
+                        Les principaux domaines que je développe au cours
+                        de ma formation BTS SIO SISR.
+                    </p>
+
+                </div>
+
+
+                <div class="skills-grid">
+
+                    <div class="skill-card">
+
+                        <div class="skill-icon">
+                            🖥️
+                        </div>
+
+                        <h3>
+                            Systèmes
+                        </h3>
+
+                        <p>
+                            Installation, configuration et administration
+                            des systèmes informatiques.
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <div class="skill-icon">
+                            🌐
+                        </div>
+
+                        <h3>
+                            Réseaux
+                        </h3>
+
+                        <p>
+                            Compréhension des réseaux, adressage IP,
+                            services réseau et équipements.
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <div class="skill-icon">
+                            🐧
+                        </div>
+
+                        <h3>
+                            Linux
+                        </h3>
+
+                        <p>
+                            Utilisation de l'environnement Linux et
+                            découverte de l'administration système.
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <div class="skill-icon">
+                            🔐
+                        </div>
+
+                        <h3>
+                            Cybersécurité
+                        </h3>
+
+                        <p>
+                            Découverte des principes de sécurité des
+                            systèmes et des réseaux.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PROJETS
+        ========================= -->
+
+        <section class="pages" id="projets">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div class="section-label">
+                        Portfolio
+                    </div>
+
+                    <h2 class="section-title">
+                        Mes travaux et projets
+                    </h2>
+
+                    <p class="section-description">
+                        Cette partie sera complétée avec mes différents
+                        projets et réalisations effectués pendant mon BTS.
+                    </p>
+
+                </div>
+
+
+                <div class="pages-grid">
+
+                    <div class="page-card">
+
+                        <div class="number">
+                            01
+                        </div>
+
+                        <h3>
+                            Projets informatiques
+                        </h3>
+
+                        <p>
+                            Présentation de mes projets, travaux pratiques
+                            et réalisations techniques.
+                        </p>
+
+                    </div>
+
+
+                    <div class="page-card">
+
+                        <div class="number">
+                            02
+                        </div>
+
+                        <h3>
+                            Épreuve E4
+                        </h3>
+
+                        <p>
+                            Présentation de mes situations professionnelles
+                            et compétences mobilisées.
+                        </p>
+
+                    </div>
+
+
+                    <div class="page-card">
+
+                        <div class="number">
+                            03
+                        </div>
+
+                        <h3>
+                            Épreuve E5
+                        </h3>
+
+                        <p>
+                            Présentation de mes réalisations professionnelles
+                            liées à la spécialité SISR.
+                        </p>
+
+                    </div>
+
+
+                    <div class="page-card">
+
+                        <div class="number">
+                            04
+                        </div>
+
+                        <h3>
+                            Veille technologique
+                        </h3>
+
+                        <p>
+                            Sujets technologiques suivis dans les domaines
+                            des réseaux, systèmes et cybersécurité.
+                        </p>
+
+                    </div>
+
+
+                    <div class="page-card">
+
+                        <div class="number">
+                            05
+                        </div>
+
+                        <h3>
+                            Mon CV
+                        </h3>
+
+                        <p>
+                            Retrouvez mon parcours scolaire, mes compétences
+                            et mes expériences professionnelles.
+                        </p>
+
+                    </div>
+
+
+                    <div class="page-card">
+
+                        <div class="number">
+                            06
+                        </div>
+
+                        <h3>
+                            Contact
+                        </h3>
+
+                        <p>
+                            Retrouvez mes coordonnées pour échanger avec moi
+                            au sujet de mon parcours.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             OBJECTIF
+        ========================= -->
+
+        <section class="objective" id="objectif">
+
+            <div class="container">
+
+                <div class="objective-box">
+
+                    <div>
+
+                        <h2>
+                            🎯 Mon objectif professionnel
+                        </h2>
+
+                        <p>
+                            Mon objectif est de continuer à développer mes
+                            compétences dans les systèmes, les réseaux et
+                            la cybersécurité afin de construire progressivement
+                            mon projet professionnel dans le domaine de
+                            l'informatique.
+                        </p>
+
+                    </div>
+
+                    <div class="objective-icon">
+                        🚀
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT
+        ========================= -->
+
+        <section id="contact">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div class="section-label">
+                        Contact
+                    </div>
+
+                    <h2 class="section-title">
+                        Me contacter
+                    </h2>
+
+                    <p class="section-description">
+                        Vous souhaitez échanger avec moi ? Vous pouvez
+                        me contacter directement.
+                    </p>
+
+                </div>
+
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="mailto:akuteyebuenorkor@gmail.com"
+                        class="btn btn-primary"
+                    >
+                        📧 Envoyer un email
+                    </a>
+
+                    <a
+                        href="tel:0746251890"
+                        class="btn btn-secondary"
+                    >
+                        📱 07 46 25 18 90
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-logo">
+                Christiana <span>Akuteye</span>
+            </div>
+
+            <div class="footer-text">
+                © 2026 — Portfolio BTS SIO SISR
+            </div>
+
+            <div class="footer-text">
+                Systèmes • Réseaux • Cybersécurité
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        const menuButton = document.getElementById("menuButton");
+        const navLinks = document.getElementById("navLinks");
+
+        menuButton.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+
+        // Ferme le menu mobile après avoir cliqué sur un lien
+
+        document.querySelectorAll(".nav-links a").forEach(link => {
+
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("active");
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
