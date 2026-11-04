@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Portfolio Christiana Akuteye - BTS SIO SISR</title>
+<meta name="description" content="Portfolio de Christiana Emelia Akuteye, étudiante en BTS SIO option SISR.">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&display=swap">
 <style>
 :root{--bg:#f2f5f8;--surface:#fff;--fg:#14202b;--muted:#55667a;--line:#d3dce6;--accent:#1d5fbf;--soft:#e2ecfa;--on:#fff;
@@ -16,35 +17,41 @@ a{color:var(--accent)}
 h1,h2,h3,h4{font-family:var(--d);margin:0;line-height:1.15}
 p{margin:0}
 .wrap{max-width:920px;margin:0 auto;padding-inline:20px}
+
+/* Menu */
 header{position:sticky;top:0;z-index:10;background:var(--surface);border-bottom:1px solid var(--line)}
 header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-block:10px}
 .brand{font:700 1.1rem var(--d);color:var(--fg);text-decoration:none}
 nav{display:flex;flex-wrap:wrap;gap:2px}
 nav a{font:500 13px/1 var(--m);color:var(--muted);text-decoration:none;padding:10px 9px}
 nav a:hover{color:var(--accent)}
-section{padding-block:56px 8px}
+
+/* Sections */
+section{padding-block:60px 8px}
 .eyebrow{font:500 12px/1 var(--m);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
 h1{font-size:clamp(2.3rem,7vw,3.5rem);letter-spacing:-.02em}
 h2{font-size:clamp(1.5rem,4.5vw,2rem);margin-bottom:20px}
+h3.sub{font-size:1.25rem;margin:36px 0 16px}
 .role{font:500 15px/1.5 var(--m);color:var(--muted);margin-top:16px}
 .lead{margin-top:16px;max-width:62ch}
+.note{font:400 13px/1.5 var(--m);color:var(--muted);margin:0 0 16px}
+
+/* Accueil */
 .hero{display:grid;gap:32px;grid-template-columns:1fr;align-items:center}
-@media(min-width:800px){.hero{grid-template-columns:1.15fr 1fr}}
+@media(min-width:800px){.hero{grid-template-columns:1.2fr 1fr}}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0;padding:0;list-style:none}
 .chips li{font:500 13px/1 var(--m);padding:8px 11px;background:var(--soft);color:var(--accent)}
 .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
 .btn{display:inline-block;font:600 15px/1 var(--b);text-decoration:none;padding:14px 20px;border:1px solid var(--accent);background:var(--accent);color:var(--on)}
 .btn.ghost{background:transparent;color:var(--accent)}
-.diagram{margin:0;background:var(--surface);border:1px solid var(--line);padding:14px}
-.diagram svg{display:block;width:100%;height:auto}
-.diagram .zone{fill:none;stroke:var(--line);stroke-width:1.5;stroke-dasharray:5 4}
-.diagram .node{fill:var(--bg);stroke:var(--fg);stroke-width:1.5}
-.diagram .link{stroke:var(--accent);stroke-width:2}
-.diagram .dot{fill:var(--accent)}
-.diagram text{fill:var(--fg);font-family:var(--m);font-size:11px}
-.diagram .sub{fill:var(--muted);font-size:9.5px}
-.diagram .zl{fill:var(--accent);font-size:10px}
-.diagram figcaption{font:400 12px/1.4 var(--m);color:var(--muted);margin-top:10px}
+.facts{background:var(--surface);border:1px solid var(--line);padding:22px;margin:0}
+.facts div{display:grid;gap:4px;padding:14px 0;border-top:1px solid var(--line)}
+.facts div:first-child{border-top:0;padding-top:0}
+.facts div:last-child{padding-bottom:0}
+.facts dt{font:500 12px/1 var(--m);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.facts dd{margin:0;font-weight:600}
+
+/* Cartes et grilles */
 .grid{display:grid;gap:16px;grid-template-columns:1fr}
 @media(min-width:700px){.two{grid-template-columns:1fr 1fr}.three{grid-template-columns:repeat(3,1fr)}.four{grid-template-columns:repeat(4,1fr)}}
 .card{background:var(--surface);border:1px solid var(--line);padding:22px;min-width:0}
@@ -52,36 +59,49 @@ h2{font-size:clamp(1.5rem,4.5vw,2rem);margin-bottom:20px}
 .card ul{margin:14px 0 0;padding-left:20px}
 .card li{margin-bottom:6px}
 .meta{font:400 13px/1.5 var(--m);color:var(--muted);margin-top:8px}
-.card h4{font:500 12px/1 var(--m);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:18px 0 6px}
 .tag{display:inline-block;font:500 12px/1 var(--m);background:var(--accent);color:var(--on);padding:6px 9px;margin-bottom:14px}
+.placeholder{border-style:dashed;color:var(--muted)}
+
+/* Parcours */
 .timeline{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
 .timeline li{position:relative;padding:0 0 24px 22px}
+.timeline li:last-child{padding-bottom:0}
 .timeline li::before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;background:var(--bg);border:2px solid var(--accent);border-radius:50%}
 .timeline li.now::before{background:var(--accent)}
 .when{font:500 13px/1 var(--m);color:var(--accent)}
 .timeline h3{font-size:1.15rem;margin-top:6px}
 .timeline p{color:var(--muted);font-size:15.5px}
+
+/* Compétences */
 .skills{list-style:none;margin:12px 0 0;padding:0}
 .skills li{font:400 14px/1.5 var(--m);padding:8px 0;border-top:1px solid var(--line);margin:0}
 .skills li:first-child{border-top:0}
+
+/* Méthode DIRE */
 .steps{list-style:none;margin:0;padding:0;display:grid;gap:16px;grid-template-columns:1fr}
 @media(min-width:700px){.steps{grid-template-columns:repeat(4,1fr)}}
 .steps li{background:var(--surface);border:1px solid var(--line);padding:18px}
 .steps .l{font:700 2rem/1 var(--d);color:var(--accent)}
 .steps b{display:block;margin-top:8px;font-family:var(--d)}
 .steps span{display:block;margin-top:4px;font-size:14.5px;color:var(--muted);line-height:1.5}
+
+/* Tableaux */
 .table-wrap{overflow-x:auto;border:1px solid var(--line);background:var(--surface)}
 table{width:100%;border-collapse:collapse;min-width:520px}
 th,td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:top;font-size:15.5px}
 th{font:500 12px/1.3 var(--m);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--bg)}
 tr:last-child td{border-bottom:0}
 .empty{color:var(--muted);font-style:italic}
+
+/* Contact */
 .contact{list-style:none;margin:0;padding:0}
 .contact li{display:grid;gap:4px;padding:16px 0;border-top:1px solid var(--line)}
 .contact li:first-child{border-top:0;padding-top:0}
 .contact .k{font:500 12px/1 var(--m);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .contact .v{font-size:1.15rem;font-weight:600;overflow-wrap:anywhere}
-footer{margin-top:56px;border-top:1px solid var(--line);background:var(--surface);padding-block:26px}
+
+/* Pied de page */
+footer{margin-top:64px;border-top:1px solid var(--line);background:var(--surface);padding-block:26px}
 footer p{font:400 13px/1.7 var(--m);color:var(--muted)}
 </style>
 </head>
@@ -103,54 +123,56 @@ footer p{font:400 13px/1.7 var(--m);color:var(--muted)}
 
 <main class="wrap">
 
-<!-- ACCUEIL -->
+<!-- ============ ACCUEIL ============ -->
 <section id="accueil">
   <div class="hero">
     <div>
       <p class="eyebrow">Portfolio · BTS SIO option SISR</p>
       <h1>Christiana Emelia Akuteye</h1>
       <p class="role">Étudiante en 2e année de BTS SIO · ITIS · Brétigny-sur-Orge (91)</p>
-      <p class="lead">Je me forme à l'administration des systèmes et des réseaux. Je configure des serveurs Windows, j'assiste des utilisateurs et je documente mes procédures. Ce portfolio rassemble mon parcours, mes réalisations et ma veille technologique.</p>
+      <p class="lead">Je me forme à l'administration des systèmes et des réseaux. Ce portfolio présente mon parcours, mes compétences, ma veille technologique et mes réalisations.</p>
       <ul class="chips">
-        <li>Active Directory</li><li>DNS / DHCP</li><li>GPO</li><li>PowerShell</li>
+        <li>Systèmes</li><li>Réseaux</li><li>Support</li><li>Cybersécurité</li>
       </ul>
       <div class="actions">
-        <a class="btn" href="#realisations">Voir mes réalisations</a>
+        <a class="btn" href="#a-propos">Me découvrir</a>
         <a class="btn ghost" href="CV_Christiana_Akuteye.pdf" download>Télécharger mon CV</a>
       </div>
     </div>
-    <figure class="diagram">
-      <svg viewBox="0 0 340 210" role="img" aria-label="Schéma du domaine medilog.local">
-        <rect class="zone" x="8" y="8" width="324" height="194" rx="4"/>
-        <text class="zl" x="20" y="28">DOMAINE medilog.local</text>
-        <rect class="node" x="106" y="46" width="128" height="52" rx="3"/>
-        <text x="170" y="68" text-anchor="middle">SRV-DC01</text>
-        <text class="sub" x="170" y="84" text-anchor="middle">AD · DNS · DHCP</text>
-        <line class="link" x1="170" y1="98" x2="170" y2="138"/>
-        <circle class="dot" cx="170" cy="98" r="3.5"/>
-        <circle class="dot" cx="170" cy="138" r="3.5"/>
-        <rect class="node" x="106" y="138" width="128" height="52" rx="3"/>
-        <text x="170" y="160" text-anchor="middle">PC-CLIENT</text>
-        <text class="sub" x="170" y="176" text-anchor="middle">poste membre du domaine</text>
-      </svg>
-      <figcaption>Maquette du TP Medilog Services sous VirtualBox.</figcaption>
-    </figure>
+    <dl class="facts">
+      <div><dt>Formation</dt><dd>BTS SIO, 2e année</dd></div>
+      <div><dt>Spécialité</dt><dd>SISR</dd></div>
+      <div><dt>École</dt><dd>ITIS</dd></div>
+      <div><dt>Ville</dt><dd>Brétigny-sur-Orge (91)</dd></div>
+    </dl>
   </div>
 </section>
 
-<!-- A PROPOS -->
+<!-- ============ A PROPOS ============ -->
 <section id="a-propos">
   <p class="eyebrow">À propos</p>
   <h2>Qui je suis</h2>
-  <p class="lead" style="margin-top:0;margin-bottom:28px">Je m'appelle Christiana Emelia Akuteye, j'ai 21 ans et j'habite à Brétigny-sur-Orge (91). Je suis en 2e année de BTS SIO (Services informatiques aux organisations), option SISR (Solutions d'infrastructure, systèmes et réseaux), à ITIS.</p>
+
+  <h3 class="sub" style="margin-top:0">Présentation rapide</h3>
+  <p class="lead" style="margin-top:0">Je m'appelle Christiana Emelia Akuteye, j'ai 21 ans et j'habite à Brétigny-sur-Orge. Je suis en 2e année de BTS SIO (Services informatiques aux organisations), à ITIS.</p>
+
+  <h3 class="sub">Ma spécialité : SISR</h3>
+  <div class="card">
+    <p>SISR signifie Solutions d'infrastructure, systèmes et réseaux. Cette option forme à installer, administrer et sécuriser l'infrastructure informatique d'une organisation : serveurs, postes de travail et réseau.</p>
+  </div>
+
+  <h3 class="sub">Parcours</h3>
   <ol class="timeline">
     <li><span class="when">2023 – 2024</span><h3>Baccalauréat général, série D</h3><p>Groupe scolaire Saint Louis</p></li>
     <li><span class="when">2024 – 2025</span><h3>1re année réseau et génie logiciel</h3><p>Pigier Côte d'Ivoire</p></li>
     <li><span class="when">2025 – 2026</span><h3>BTS SIO, 1re année</h3><p>Diderot, Paris</p></li>
     <li class="now"><span class="when">2026 – 2027</span><h3>BTS SIO, 2e année, option SISR</h3><p>ITIS</p></li>
   </ol>
-  <div class="card" style="margin-top:24px">
-    <h3>Stage chez AG Consulting</h3>
+
+  <h3 class="sub">Stage et alternance</h3>
+  <div class="card">
+    <span class="tag">Stage</span>
+    <h3>AG Consulting</h3>
     <p class="meta">Du 23 juin au 28 juillet 2026</p>
     <ul>
       <li>Installation et mise à jour de postes de travail.</li>
@@ -158,31 +180,51 @@ footer p{font:400 13px/1.7 var(--m);color:var(--muted)}
       <li>Suivi du parc informatique.</li>
     </ul>
   </div>
-  <div class="actions">
-    <a class="btn" href="CV_Christiana_Akuteye.pdf" download>Télécharger mon CV</a>
+
+  <h3 class="sub">Mon CV</h3>
+  <div class="card">
+    <p>Mon CV est disponible au téléchargement au format PDF.</p>
+    <div class="actions"><a class="btn" href="CV_Christiana_Akuteye.pdf" download>Télécharger mon CV</a></div>
   </div>
 </section>
 
-<!-- COMPETENCES -->
+<!-- ============ COMPETENCES ============ -->
 <section id="competences">
   <p class="eyebrow">Compétences</p>
   <h2>Ce que je sais faire</h2>
   <div class="grid three">
     <div class="card"><h3>Systèmes</h3>
-      <ul class="skills"><li>Active Directory</li><li>Stratégies de groupe (GPO)</li><li>PowerShell et PowerShell ISE</li><li>Machines virtuelles VirtualBox</li></ul></div>
+      <ul class="skills"><li>Active Directory</li><li>Stratégies de groupe (GPO)</li><li>PowerShell</li><li>Machines virtuelles</li></ul></div>
     <div class="card"><h3>Réseau</h3>
-      <ul class="skills"><li>Service DNS</li><li>Service DHCP</li><li>Diagnostic de connectivité (ping, pare-feu)</li></ul></div>
+      <ul class="skills"><li>Service DNS</li><li>Service DHCP</li><li>Diagnostic de connectivité</li></ul></div>
     <div class="card"><h3>Support</h3>
       <ul class="skills"><li>Installation de postes</li><li>Mises à jour</li><li>Assistance aux utilisateurs</li><li>Documentation des procédures</li></ul></div>
   </div>
+
+  <h3 class="sub">Correspondance réalisations ↔ Bloc 1</h3>
+  <p class="note">Bloc 1 : Support et mise à disposition de services informatiques.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Compétence du Bloc 1</th><th>Réalisation associée</th></tr></thead>
+      <tbody>
+        <tr><td>Gérer le patrimoine informatique</td><td>Stage chez AG Consulting</td></tr>
+        <tr><td>Répondre aux incidents et aux demandes d'assistance et d'évolution</td><td>Stage chez AG Consulting</td></tr>
+        <tr><td>Développer la présence en ligne de l'organisation</td><td class="empty">À compléter</td></tr>
+        <tr><td>Travailler en mode projet</td><td class="empty">À compléter</td></tr>
+        <tr><td>Mettre à disposition des utilisateurs un service informatique</td><td class="empty">À compléter</td></tr>
+        <tr><td>Organiser son développement professionnel</td><td>Veille technologique</td></tr>
+      </tbody>
+    </table>
+  </div>
 </section>
 
-<!-- VEILLE -->
+<!-- ============ VEILLE ============ -->
 <section id="veille">
   <p class="eyebrow">Veille technologique</p>
   <h2>L'actualité des cyberattaques en France</h2>
-  <p class="lead" style="margin-top:0;margin-bottom:24px">Je suis les attaques informatiques qui touchent des organisations françaises, pour comprendre comment elles se déroulent et comment s'en protéger. Chaque cas illustre une notion vue en cours de cybersécurité.</p>
 
+  <h3 class="sub" style="margin-top:0">Sujet</h3>
+  <p class="lead" style="margin-top:0;margin-bottom:20px">Je suis les attaques informatiques qui touchent des organisations françaises, pour comprendre comment elles se déroulent et comment s'en protéger. Chaque cas illustre une notion vue en cours de cybersécurité.</p>
   <div class="grid two">
     <div class="card"><h3>Ransomware</h3><p>Attaques visant les hôpitaux, les mairies et les collectivités.</p></div>
     <div class="card"><h3>Fuites de données</h3><p>Origine de la fuite, ampleur et réponse des organisations touchées.</p></div>
@@ -190,7 +232,7 @@ footer p{font:400 13px/1.7 var(--m);color:var(--muted)}
     <div class="card"><h3>Lien avec le cours</h3><p>Chaque cas retenu est rattaché à une notion vue en classe.</p></div>
   </div>
 
-  <h3 style="margin:36px 0 16px">Sources suivies</h3>
+  <h3 class="sub">Sources</h3>
   <div class="grid four">
     <div class="card"><h3>CERT-FR / ANSSI</h3><p class="meta">Source officielle</p></div>
     <div class="card"><h3>LeMagIT</h3><p class="meta">Presse spécialisée</p></div>
@@ -198,22 +240,16 @@ footer p{font:400 13px/1.7 var(--m);color:var(--muted)}
     <div class="card"><h3>Le Monde Informatique</h3><p class="meta">Presse spécialisée</p></div>
   </div>
 
-  <h3 style="margin:36px 0 16px">Méthode DIRE</h3>
+  <h3 class="sub">Méthode DIRE</h3>
   <ol class="steps">
     <li><div class="l">D</div><b>Détecter</b><span>Repérer les nouvelles informations grâce à un agrégateur de flux.</span></li>
     <li><div class="l">I</div><b>Identifier</b><span>Choisir les sources fiables et les sujets pertinents.</span></li>
     <li><div class="l">R</div><b>Recueillir</b><span>Garder les éléments retenus avec leur date et leur source.</span></li>
-    <li><div class="l">E</div><b>Exploiter</b><span>Rédiger une synthèse utile au métier et à mes projets.</span></li>
+    <li><div class="l">E</div><b>Exploiter</b><span>Rédiger une synthèse utile au métier.</span></li>
   </ol>
 
-  <h3 style="margin:36px 0 16px">Organisation sur l'année</h3>
-  <div class="grid two">
-    <div class="card"><h3>Fréquence</h3><p>Un point toutes les 2 à 3 semaines. Un suivi quotidien n'est pas nécessaire.</p></div>
-    <div class="card"><h3>Restitution</h3><p>Les fiches sont intégrées au dossier numérique de l'épreuve E5, en lien avec le portfolio de réalisations.</p></div>
-  </div>
-
-  <h3 style="margin:36px 0 8px">Fiches de synthèse</h3>
-  <p class="meta" style="margin:0 0 16px">Date, source, résumé en 2 à 3 lignes, pertinence pour le métier ou pour Medilog.</p>
+  <h3 class="sub">Synthèses</h3>
+  <p class="note">Pour chaque élément retenu : date, source, résumé en 2 à 3 lignes, pertinence pour le métier ou pour Medilog.</p>
   <div class="table-wrap">
     <table>
       <thead><tr><th>Date</th><th>Source</th><th>Résumé</th><th>Pertinence</th></tr></thead>
@@ -223,33 +259,26 @@ footer p{font:400 13px/1.7 var(--m);color:var(--muted)}
       </tbody>
     </table>
   </div>
+
+  <h3 class="sub">Évolution</h3>
+  <div class="grid two">
+    <div class="card"><h3>Fréquence</h3><p>Un point toutes les 2 à 3 semaines. Un suivi quotidien n'est pas nécessaire.</p></div>
+    <div class="card"><h3>Restitution</h3><p>Les fiches sont intégrées au dossier numérique de l'épreuve E5, en lien avec le portfolio de réalisations.</p></div>
+  </div>
 </section>
 
-<!-- REALISATIONS -->
+<!-- ============ REALISATIONS ============ -->
 <section id="realisations">
   <p class="eyebrow">Réalisations</p>
-  <h2>Projets école et expérience en entreprise</h2>
-  <div class="grid two">
-    <article class="card">
-      <span class="tag">TP2</span>
-      <h3>Active Directory, DNS et DHCP</h3>
-      <p class="meta">Domaine medilog.local · VirtualBox sur mon portable</p>
-      <h4>Réalisé</h4>
-      <p>Déploiement des services d'annuaire, de noms et d'adressage sur SRV-DC01, puis intégration du poste PC-CLIENT au domaine.</p>
-      <h4>Difficulté rencontrée</h4>
-      <p>Les deux machines virtuelles ne se pingaient pas. La cause était le pare-feu de PC-CLIENT.</p>
-    </article>
-    <article class="card">
-      <span class="tag">TP3</span>
-      <h3>GPO et administration de l'annuaire</h3>
-      <p class="meta">Domaine medilog.local · VirtualBox · 27/10 et 04/11/2026</p>
-      <h4>Réalisé</h4>
-      <p>Création des utilisateurs par script PowerShell. GPO_Restriction_Commercial liée à OU_Commercial et testée avec le compte c.martin : le Panneau de configuration affiche le message de restriction.</p>
-      <h4>Difficultés rencontrées</h4>
-      <p>Les modèles ADMX de Microsoft Office étaient absents du serveur. J'ai créé et lié la GPO_Domaine_SecuriteMacros au domaine et décrit la procédure dans ma fiche SP1. Le copier-coller vers la machine virtuelle ne fonctionnait pas : j'ai saisi le script à la main dans PowerShell ISE.</p>
-    </article>
+  <h2>Projets école et réalisations en entreprise</h2>
+
+  <h3 class="sub" style="margin-top:0">Projets école</h3>
+  <div class="card placeholder">
+    <p>Les projets réalisés à l'école seront ajoutés prochainement.</p>
   </div>
-  <article class="card" style="margin-top:16px">
+
+  <h3 class="sub">Réalisations en entreprise</h3>
+  <div class="card">
     <span class="tag">Stage</span>
     <h3>AG Consulting</h3>
     <p class="meta">Du 23 juin au 28 juillet 2026</p>
@@ -258,32 +287,19 @@ footer p{font:400 13px/1.7 var(--m);color:var(--muted)}
       <li>Assistance aux utilisateurs.</li>
       <li>Suivi du parc informatique.</li>
     </ul>
-  </article>
-
-  <h3 style="margin:36px 0 8px">Correspondance avec le Bloc 1</h3>
-  <p class="meta" style="margin:0 0 16px">Bloc 1 : Support et mise à disposition de services informatiques.</p>
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>Réalisation</th><th>Compétence du Bloc 1</th></tr></thead>
-      <tbody>
-        <tr><td>TP2 : Active Directory, DNS, DHCP</td><td>Mettre à disposition des utilisateurs un service informatique</td></tr>
-        <tr><td>TP3 : GPO et administration de l'annuaire</td><td>Mettre à disposition des utilisateurs un service informatique</td></tr>
-        <tr><td>Stage chez AG Consulting</td><td>Gérer le patrimoine informatique ; répondre aux incidents et aux demandes d'assistance et d'évolution</td></tr>
-        <tr><td>Veille : cyberattaques en France</td><td>Organiser son développement professionnel</td></tr>
-      </tbody>
-    </table>
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- ============ CONTACT ============ -->
 <section id="contact">
   <p class="eyebrow">Contact</p>
-  <h2>Me contacter</h2>
+  <h2>Informations professionnelles</h2>
   <div class="card">
     <ul class="contact">
       <li><span class="k">Téléphone</span><a class="v" href="tel:+33746251890">+33 7 46 25 18 90</a></li>
       <li><span class="k">E-mail</span><a class="v" href="mailto:akuteyebuenorkor@gmail.com">akuteyebuenorkor@gmail.com</a></li>
-      <li><span class="k">Localisation</span><span class="v"</span></li>
+      <li><span class="k">Localisation</span><span class="v">Brétigny-sur-Orge (91220)</span></li>
+      <li><span class="k">Formation</span><span class="v">BTS SIO option SISR · ITIS</span></li>
     </ul>
     <div class="actions">
       <a class="btn" href="CV_Christiana_Akuteye.pdf" download>Télécharger mon CV</a>
@@ -295,8 +311,7 @@ footer p{font:400 13px/1.7 var(--m);color:var(--muted)}
 
 <footer>
   <div class="wrap">
-    <p>© 2026 Christiana Emelia Akuteye · BTS SIO option SISR · ITIS<br>
-  .</p>
+    <p>© 2026 Christiana Emelia Akuteye · BTS SIO option SISR · ITIS</p>
   </div>
 </footer>
 
