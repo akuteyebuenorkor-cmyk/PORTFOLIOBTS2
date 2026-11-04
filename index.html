@@ -35,13 +35,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:10;background:rgba(11,18,32,.9);
 .card p,.muted{color:var(--muted);font-size:.93rem}
 .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
 .chip{background:var(--card);border:1px solid var(--line);padding:8px 16px;border-radius:999px;font-size:.9rem}
-.timeline{border-left:2px solid var(--line);padding-left:22px}
-.item{position:relative;margin-bottom:26px}
-.item::before{content:"";position:absolute;left:-30px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
-.item .date{color:var(--accent);font-size:.85rem;font-weight:600}
-.item h3{font-size:1.05rem}
 .soon{opacity:.7;border-style:dashed}
 .contact a{color:var(--accent)}
+.sub{font-size:1.2rem;margin:26px 0 14px;color:var(--accent)}
+.pcard{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;margin-bottom:14px;transition:.2s}
+.pcard:hover{border-color:var(--accent);transform:translateY(-3px)}
+.ico{flex:0 0 52px;height:52px;border-radius:10px;display:grid;place-items:center;font-weight:700;color:#06101f;background:linear-gradient(135deg,var(--accent),var(--accent2))}
+.pcard .date{color:var(--accent);font-size:.85rem;font-weight:600}
+.pcard h4{font-size:1.05rem}
+.pcard .where{font-size:.9rem;font-weight:600}
 footer{text-align:center;padding:30px 20px;color:var(--muted);border-top:1px solid var(--line);font-size:.85rem}
 .reveal{opacity:0;transform:translateY(24px);transition:.7s}
 .reveal.show{opacity:1;transform:none}
@@ -63,6 +65,7 @@ footer{text-align:center;padding:30px 20px;color:var(--muted);border-top:1px sol
   <li><a href="#parcours">Parcours</a></li>
   <li><a href="#projects">Réalisations</a></li>
   <li><a href="#veille">Veille</a></li>
+  <li><a href="e5.html">E5</a></li>
   <li><a href="#contact">Contact</a></li>
  </ul>
 </div></nav>
@@ -75,12 +78,13 @@ footer{text-align:center;padding:30px 20px;color:var(--muted);border-top:1px sol
   <a class="btn primary" href="#about">Découvrir mon profil</a>
   <a class="btn" href="assets/CV_Christiana_Akuteye.pdf" download>Télécharger mon CV</a>
   <a class="btn" href="#contact">Me contacter</a>
+  <a class="btn" href="e5.html">Accès E5</a>
  </div>
 </section>
 
 <section id="about" class="reveal">
  <h2>À propos de moi</h2>
- <p>Étudiante en BTS SIO option SISR à ITIS (Brétigny-sur-Orge), je m'intéresse à l'administration des systèmes, aux réseaux et à la sécurité informatique. J'ai effectué un stage chez AG Consulting où j'ai installé et mis à jour des postes, assisté des utilisateurs et participé à la gestion du parc informatique.</p>
+ <p>Christiana Emelia Akuteye, 21 ans, étudiante en BTS SIO option SISR à ITIS (Brétigny-sur-Orge), je m'intéresse à l'administration des systèmes, aux réseaux et à la sécurité informatique. J'ai effectué un stage chez AG Consulting où j'ai installé et mis à jour des postes, assisté des utilisateurs et participé à la gestion du parc informatique.</p>
 </section>
 
 <section id="skills" class="reveal">
@@ -99,13 +103,27 @@ footer{text-align:center;padding:30px 20px;color:var(--muted);border-top:1px sol
 
 <section id="parcours" class="reveal">
  <h2>Mon parcours</h2>
- <div class="timeline">
-  <div class="item"><div class="date">2026 – 2027</div><h3>BTS SIO option SISR, 2e année</h3><p class="muted">ITIS – Brétigny-sur-Orge</p></div>
-  <div class="item"><div class="date">23/06/2026 – 28/07/2026</div><h3>Stage</h3><p class="muted">AG Consulting – installation et mise à jour de postes, assistance utilisateurs, parc informatique</p></div>
-  <div class="item"><div class="date">2025 – 2026</div><h3>BTS SIO, 1re année</h3><p class="muted">Diderot – Paris</p></div>
-  <div class="item"><div class="date">2024 – 2025</div><h3>1re année réseau et génie logiciel</h3><p class="muted">Pigier Côte d'Ivoire</p></div>
-  <div class="item"><div class="date">2023 – 2024</div><h3>Baccalauréat général, série D</h3><p class="muted">Groupe scolaire Saint Louis</p></div>
- </div>
+
+ <h3 class="sub">Formation</h3>
+ <div class="pcard"><div class="ico">IT</div><div>
+  <div class="date">2026 – 2027</div><h4>BTS SIO – option SISR (2e année)</h4>
+  <div class="where">ITIS – Brétigny-sur-Orge</div>
+  <p class="muted">Solutions d'infrastructure, systèmes et réseaux.</p></div></div>
+ <div class="pcard"><div class="ico">DI</div><div>
+  <div class="date">2025 – 2026</div><h4>BTS SIO (1re année)</h4>
+  <div class="where">Diderot – Paris</div></div></div>
+ <div class="pcard"><div class="ico">PI</div><div>
+  <div class="date">2024 – 2025</div><h4>1re année réseau et génie logiciel</h4>
+  <div class="where">Pigier Côte d'Ivoire</div></div></div>
+ <div class="pcard"><div class="ico">SL</div><div>
+  <div class="date">2023 – 2024</div><h4>Baccalauréat général – série D</h4>
+  <div class="where">Groupe scolaire Saint Louis</div></div></div>
+
+ <h3 class="sub">Expérience</h3>
+ <div class="pcard"><div class="ico">AG</div><div>
+  <div class="date">23/06/2026 – 28/07/2026</div><h4>Stagiaire informatique</h4>
+  <div class="where">AG Consulting</div>
+  <p class="muted">Installation et mise à jour de postes, assistance aux utilisateurs, gestion du parc informatique.</p></div></div>
 </section>
 
 <section id="projects" class="reveal">
@@ -124,9 +142,28 @@ footer{text-align:center;padding:30px 20px;color:var(--muted);border-top:1px sol
   <p>Suivi des ransomwares visant hôpitaux, mairies et collectivités, des fuites de données et des alertes de l'ANSSI. Sources : CERT-FR, LeMagIT, ZDNet, Le Monde Informatique.</p>
  </div>
 </section>
-
+<section id="e5" class="reveal">
+ <h2>Épreuve E5</h2>
+ <div class="card">
+  <h3>Portefeuille de compétences professionnelles</h3>
+  <p>Retrouve ici mes réalisations, la veille technologique et les documents de l'épreuve E5.</p>
+  <p style="margin-top:14px"><a class="btn primary" href="e5.html">Accéder à l'épreuve E5</a></p>
+ </div>
+</section>
 <section id="contact" class="reveal contact">
  <h2>Me contacter</h2>
  <div class="grid">
   <div class="card"><h3>Email</h3><p><a href="mailto:akuteyebuenorkor@gmail.com">akuteyebuenorkor@gmail.com</a></p></div>
-  <div class="card">
+  <div class="card"><h3>Téléphone</h3><p><a href="tel:+33746251890">+33 7 46 25 18 90</a></p></div>
+  <div class="card"><h3>Localisation</h3><p>Brétigny-sur-Orge (91220)</p></div>
+ </div>
+</section>
+
+<footer>© 2026 Christiana Emelia Akuteye. Tous droits réservés.</footer>
+
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
